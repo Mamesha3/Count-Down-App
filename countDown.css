@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: azure;
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    bottom: -100px;
+}
+h1 .title {
+    color: orangered;
+    font-weight: 540;
+    font-style: italic;
+}
+.action-container {
+    border: 4px solid orangered;
+    width: 450px;
+    border-radius: 8px;
+    margin: auto;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease-in-out;
+}
+.transform {
+    animation: transform 0.5s alternate ease-in-out;
+}
+@keyframes transform {
+    from{
+        transform: translate(-50%, -50%) scale(0.1);
+    }
+    to{transform: translate(-50%, -50%) scale(1);}
+}
+.dates {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: -16px;
+}
+.count {
+    margin-bottom: -20px;
+    font-size: 40px;
+    color: orangered;
+}
+#user-title {
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    position: relative;
+    top: 13px;
+}
+#reset-btn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 23px;
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 60%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 8px -3px black;
+    transition: background-color 0.5s ease-in-out;
+    text-transform: uppercase;
+    font-weight: 670;
+    color: orangered;
+    transition: color 0.5s ease-in-out;
+}
+#reset-btn:hover {
+    background-color: orangered;
+    color: white;
+}
+/* user input */
+.users-inputs {
+    border: 4px solid orangered;
+    width: 450px;
+    border-radius: 8px;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    padding: 10px 14px;
+    text-transform: uppercase;
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.scale {
+    animation: scale 0.4s ease-in-out alternate;
+}
+@keyframes scale {
+    from{
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to{
+        transform: translate(-50%, -50%) scale(1);
+    }
+    
+}
+#text-input,
+#date-input {
+    width: 350px;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid orangered;
+    padding: 8px 8px;
+    font-size: 20px;
+    margin-left: 7px;
+    border-radius: 3px;
+    text-align: center;
+}
+#text-input {
+    margin-top: 20px;
+    background-color: rgb(229, 237, 237, 1);
+    transition: background-color 0.5s ease-in-out;
+    position: relative;
+    left: -40px;
+}
+#text-input:focus {
+   background-color: rgba(229, 237, 2237, 0.6)
+}
+#date-input {
+    margin-top: 20px;
+    background-color: azure;
+}
+.users-inputs label {
+   color: orangered;
+   font-weight: 700;
+   text-decoration: underline;
+   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   position: relative;
+   font-style: italic;
+}
+.users-inputs label[for="text-input"] {
+    top: -35px;
+    left: 14px;
+}
+.users-inputs label[for="date-input"] {
+    top: 17px;
+    left: 8px;
+}
+#start-btn {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    font-size: 23px;
+    width: 240px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: 630;
+    box-shadow: 0 0  8px 2px azure;
+    cursor: pointer;
+    color: orangered;
+    transition: color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
+}
+#start-btn:hover {
+    background-color: orangered;
+    color: white;
+}
+.fadeout {
+    animation: fade 1.5s ease-in-out alternate infinite;
+}
+@keyframes fade {
+    from{color: green;}
+    to{color: lightgreen;}
+}
+
+
+.users-inputs {
+    display: block;
+}
+.action-container {
+     display: none; 
+}

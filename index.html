@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Down Timer</title>
+    <!-- css link -->
+     <link rel="stylesheet" href="countDown.css">
+</head>
+<body>
+    <h1><span class="title">Count</span> Down App</h1>
+    <!-- for count down display -->
+    <div class="action-container">
+        <h1 id="user-title">dinner time</h1>
+        <div class="dates">
+           <div class="days">
+              <h3 id="day-text" class="count">27</h3>
+              <h3>days</h3>
+           </div>
+           <div class="hours">
+              <h3 id="hour-text" class="count">27</h3>
+              <h3>hours</h3>
+           </div>
+           <div class="minutes">
+              <h3 id="minute-text" class="count">27</h3>
+              <h3>minutes</h3>
+           </div>
+           <div class="seconds">
+            <h3 id="second-text" class="count">27</h3>
+              <h3>seconds</h3>
+           </div>
+        </div>
+        <button id="reset-btn">reset</button>
+    </div>
+
+    <!-- for customer display inputs -->
+     <div class="users-inputs">
+        <div>
+            <label for="text-input">title</label>
+            <input type="text" id="text-input">
+        </div>
+        <div>
+            <label for="date-input">estimated time</label>
+            <input type="date" id="date-input">
+        </div>
+        <div>
+            <input type="button" value="start" id="start-btn">
+        </div>
+     </div>
+
+    <!-- javascript link -->
+    <script src="countDown.js"></script>
+</body>
+</html>
