@@ -3,12 +3,16 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: azure;
+    word-spacing: 5px;
+    letter-spacing: 3px;
 }
 h1 {
     text-align: center;
     text-transform: uppercase;
     position: relative;
     bottom: -100px;
+    position: relative;
+    top: 50px;
 }
 h1 .title {
     color: orangered;
@@ -109,7 +113,7 @@ h1 .title {
 }
 #text-input,
 #date-input {
-    width: 350px;
+    width: 80%;
     border: none;
     outline: none;
     border-bottom: 3px solid orangered;
@@ -118,19 +122,24 @@ h1 .title {
     margin-left: 7px;
     border-radius: 3px;
     text-align: center;
+    display: block;
 }
 #text-input {
-    margin-top: 20px;
+    margin-top: 0.4rem;
     background-color: rgb(229, 237, 237, 1);
     transition: background-color 0.5s ease-in-out;
-    position: relative;
-    left: -40px;
+}    
+.tit-one {
+    margin-top: .6rem;
 }
 #text-input:focus {
    background-color: rgba(229, 237, 2237, 0.6)
 }
+.date {
+    margin-top: 1.4rem;
+}
 #date-input {
-    margin-top: 20px;
+    margin-top: 0.4rem;
     background-color: azure;
 }
 .users-inputs label {
@@ -138,17 +147,9 @@ h1 .title {
    font-weight: 700;
    text-decoration: underline;
    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   position: relative;
    font-style: italic;
 }
-.users-inputs label[for="text-input"] {
-    top: -35px;
-    left: 14px;
-}
-.users-inputs label[for="date-input"] {
-    top: 17px;
-    left: 8px;
-}
+
 #start-btn {
     position: relative;
     left: 50%;
@@ -187,12 +188,28 @@ h1 .title {
 .action-container {
      display: none; 
 }
-@media (min-width: 555px) and (max-width: 800px) {
+@media (max-width: 500px) {
     .users-inputs {
-        width: 500px;
+        width: 360px;
     }
     .action-container {
-        width: 500px;
+        width: 360px;
+    }
+    .dates  {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+@media (max-width: 350px) {
+    .users-inputs {
+        width: 290px;
+    }
+    .action-container {
+        width: 290px;
+    }
+    .dates  {
+        flex-direction: column;
+        gap: 0;
     }
 }
 @media (min-width: 800px) {
