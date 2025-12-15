@@ -5,6 +5,7 @@ body {
     background-color: azure;
     word-spacing: 5px;
     letter-spacing: 3px;
+    overflow-x: hidden;
 }
 h1 {
     text-align: center;
@@ -187,6 +188,36 @@ h1 .title {
 }
 .action-container {
      display: none; 
+}
+.code_here {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    transform: translateX(200px);
+}
+
+@keyframes slidout {
+    from {
+        transform: translateX(200px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.showhere {
+    transform: translateX(0);
+    animation: slidout 1s ease-in-out alternate;
+}
+.code_here a {
+    color: white;
+    background-color: black;
+    padding: 5px 10px;
+    width: 250px;
+    border-radius: 5px;
+    text-align: center;
+}
+.code_sign {
+    cursor: pointer;
 }
 @media (max-width: 500px) {
     .users-inputs {
